@@ -58,9 +58,9 @@ $(document).ready(() => {
     }
 
     // Creates resetDiceOnScreen() Function
-    // Removes each Object in diceOnScreen Array
+    // Calls reload() Method 
     const resetDiceOnScreen = () => {
-        
+        location.reload(); 
     }
 
     // Assigns 'click' Event on <button> elements, via their id
@@ -76,7 +76,7 @@ $(document).ready(() => {
             this.value = value;
             this.id = diceCreated;
             this.div = $(`<div></div>`);
-            this.div.attr(`id`, `${this.id}`);
+            this.div.attr(`id`, this.id);
             this.div.attr(`class`, `die`);
             this.div.append(this.dieFace());
             $(`#diceContainerDiv`).append(this.div);
@@ -92,10 +92,11 @@ $(document).ready(() => {
             // Locates appropriate index of diceOnScreen Array
             // Calls splice() Method  
             this.div.dblclick(() => {
+                // console.log(this.id);
                 $(`#${this.id}`).remove();
-                // console.log(`#${this.id}`);
-                let index = diceOnScreen.findIndex(item => item.id === this.id)
+                let index = diceOnScreen.findIndex(item => item.id === this.id);
                 diceOnScreen.splice(index, 1);
+                // console.log(diceOnScreen);
             })
         }
     
