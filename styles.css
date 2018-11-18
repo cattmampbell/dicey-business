@@ -1,33 +1,22 @@
-.div-square {
+* {
+    box-sizing: initial;
+}
+
+.die {
     width: 8rem;
     height: 8rem;
-    padding: 1rem;
+    padding: 0.25rem;
     margin: 2rem;
     background-color: rgba(226, 227, 228, 0.875);
     border-radius: 5px;
     display: inline-block;
 }
 
-.die-one {
-    background-image: url(images/die-one.png);
+.die:hover {
+    cursor: pointer;
 }
 
-.die-two {
-    background-image: url(images/die-two.png);
-}
-
-.die-three {
-    background-image: url(images/die-three.png);
-}
-
-.die-four {
-    background-image: url(images/die-four.png);
-}
-
-.die-five {
-    background-image: url(images/die-five.png);
-}
-
-.die-six {
-    background-image: url(images/die-six.png);
+img {
+    width: 128px;
+    height: 128px;
 }
